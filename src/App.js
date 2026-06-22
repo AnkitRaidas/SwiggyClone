@@ -1,23 +1,23 @@
 import React ,{useState} from "react";
 import ReactDom from "react-dom/client";
-import Header from "./components/Header";
-import FoodOption from "./components/FoodOption";
-import FoodCard from "./components/FoodCard";
-import GroceryOption from "./components/GroceryOptions";
-import Grocerycard from "./components/Grocerycard";
-import DineOption from "./components/DineOptions";
-import DineCard from "./components/DineCard";
+import Restaurant from "./components/Restaurant";
+import Home from "./components/Home";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+
+
+
 
 
 function App(){
 
     return (
         <>
-        <Header></Header>
-        <FoodOption></FoodOption>
-        <GroceryOption></GroceryOption>
-        <DineOption></DineOption>
-        
+        <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Home></Home>}></Route>
+            <Route path="/restaurant" element={<Restaurant></Restaurant>}></Route>
+        </Routes>
+        </BrowserRouter>
         </>
     )
 }
